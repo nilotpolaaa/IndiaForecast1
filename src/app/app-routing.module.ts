@@ -16,7 +16,7 @@ const routes: Routes = [
   { path : 'extremeweather/humidity', component: HumidityTableDataComponent},
   { path : 'extremeweather/temperature', component: TemperatureTableDataComponent},
   { path : 'extremeweather/windspeed', component: WindSpeedTableDataComponent}
-  
+
 ];
 
 @NgModule({

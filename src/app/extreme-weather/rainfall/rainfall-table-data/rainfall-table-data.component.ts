@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonHttpService } from '../common-http.service';
 
 @Component({
   selector: 'app-rainfall-table-data',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RainfallTableDataComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpservice: CommonHttpService) { }
 
   ngOnInit() {
+    this.getRainfallData();
+  }
+
+  getRainfallData() {
+    this.httpservice.makeGetApiCall('RAINFALLDATA', {}).subscribe(
+      data => {
+        console.log('hereee ', data);
+      }
+    )
   }
 
 }

@@ -1,5 +1,5 @@
-
-<router-outlet></router-outlet>
+<router-outlet>
+</router-outlet>
 
 <!-- <ejs-splitter #horizontal height='100%' width='100%'>
     <e-panes>
@@ -19,15 +19,23 @@
                 <app-data-tab></app-data-tab>
             </ng-template>
         </e-pane> -->
-    <!-- </e-panes>
-</ejs-splitter> --> 
+<!-- </e-panes>
+</ejs-splitter> -->
 <div>
-<div class="row">
-  <div class="column" style="width: 100px;"><app-side-nav-bar></app-side-nav-bar></div>
-  
-  <div id="demobox" class="column" style="width: 600px;"><app-data-tab></app-data-tab></div>
-  <div class="column" style="width: 200px;"><app-map></app-map></div>
-</div>
-<div style="position: absolute !important"><app-footer></app-footer>
-</div>
+    <div class="row">
+        <div class="column" style="width: 100px;">
+            <app-side-nav-bar></app-side-nav-bar>
+        </div>
+
+        <div id="demobox" class="column" style="width: 600px;">
+            <app-data-tab></app-data-tab>
+        </div>
+        <div class="column" style="width: 200px;">
+            <app-map></app-map>
+        </div>
+
+    </div>
+    <div style="position: absolute !important">
+        <app-footer></app-footer>
+    </div>
 </div>

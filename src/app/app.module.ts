@@ -11,6 +11,8 @@ import { WindSpeedModule } from './extreme-weather/wind-speed/wind-speed.module'
 import { RainfallModule } from './extreme-weather/rainfall/rainfall.module';
 import { SplitterModule } from '@syncfusion/ej2-angular-layouts';
 import { AngularSplitModule } from 'angular-split';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonHttpService } from './extreme-weather/rainfall/common-http.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -25,9 +27,10 @@ import { AngularSplitModule } from 'angular-split';
     TemperatureModule,
     WindSpeedModule,
     SplitterModule, 
-    AngularSplitModule
+    AngularSplitModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CommonHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
