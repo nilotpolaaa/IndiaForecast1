@@ -58,7 +58,6 @@ export class  CommonHttpService {
         isValidAPICall(api: string): object {
             if (!isNullOrUndefined(this.API_MAPPING)) {
               const currentApi = this.API_MAPPING[api];
-              console.log("hiiii", this.API_MAPPING[api]);
               if (!isNullOrUndefined(currentApi)) {
                 return {valid: true, api: currentApi};
               } else {

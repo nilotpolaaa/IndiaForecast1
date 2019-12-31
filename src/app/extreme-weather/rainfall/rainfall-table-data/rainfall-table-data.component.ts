@@ -7,6 +7,7 @@ import { CommonHttpService } from '../common-http.service';
   styleUrls: ['./rainfall-table-data.component.scss']
 })
 export class RainfallTableDataComponent implements OnInit {
+  tableData: any;
 
   constructor(private httpservice: CommonHttpService) { }
 
@@ -18,8 +19,14 @@ export class RainfallTableDataComponent implements OnInit {
     this.httpservice.makeGetApiCall('RAINFALLDATA', {}).subscribe(
       data => {
         console.log('hereee ', data);
+        this.tableData = data;
       }
     )
+  }
+
+
+  changeEvent(e) {
+    console.log(e);
   }
 
 }

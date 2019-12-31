@@ -12,7 +12,7 @@ import { DataTabComponent } from './data-tab/data-tab.component';
   declarations: [FooterComponent, SideNavBarComponent, MapComponent, DataTabComponent],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   exports: [FooterComponent, SideNavBarComponent, MapComponent, DataTabComponent]
 })
