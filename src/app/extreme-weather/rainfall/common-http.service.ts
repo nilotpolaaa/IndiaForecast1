@@ -35,23 +35,21 @@ export class  CommonHttpService {
 
         makeGetApiCall(api: string, requestData: any): Observable<any> {
 
-            // const apiStatus: any = this.isValidAPICall(api);
-            // if (!!apiStatus.valid) {
-            //     for (const val in requestData) {
+           const apiStatus: any = this.isValidAPICall(api);
+           if (!!apiStatus.valid) {
+                for (const val in requestData) {
 
-            //         if (apiStatus.api.indexOf(val)) {
+                    if (apiStatus.api.indexOf(val)) {
 
-            //           apiStatus.api = apiStatus.api.replace( new RegExp(val, 'g'), requestData[val]);
-            //         }
+                      apiStatus.api = apiStatus.api.replace( new RegExp(val, 'g'), requestData[val]);
+                    }
 
-            //         }
+                    }
 
-            //     return this.http.get(this.baseUrl + '' + apiStatus.api, {headers: this.getHeaders()});
-            // } else {
-            //       // console.log("entered into not this");
-            //     return throwError({status: false, msg: apiStatus.msg});
-            // }
-            return this.http.get('https://forecast.vassarlabs.com/api/commanddashboard/getdashboarddata/RAINFALL/forecast/District');
+                return this.http.get(this.baseUrl + '' + apiStatus.api, {headers: this.getHeaders()});
+            } else {
+                return throwError({status: false, msg: apiStatus.msg});
+            }
         }
 
 

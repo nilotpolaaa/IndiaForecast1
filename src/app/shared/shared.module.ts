@@ -5,7 +5,8 @@ import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { MapComponent } from './map/map.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { DataTabComponent } from './data-tab/data-tab.component';
-
+import { FormsModule } from '@angular/forms';
+import { MatTableModule, MatSortModule } from '@angular/material';
 
 
 @NgModule({
@@ -13,6 +14,8 @@ import { DataTabComponent } from './data-tab/data-tab.component';
   imports: [
     CommonModule,
     AppRoutingModule,
+    FormsModule,
+    MatTableModule
   ],
   exports: [FooterComponent, SideNavBarComponent, MapComponent, DataTabComponent]
 })

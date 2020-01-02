@@ -13,6 +13,9 @@ import { SplitterModule } from '@syncfusion/ej2-angular-layouts';
 import { AngularSplitModule } from 'angular-split';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonHttpService } from './extreme-weather/rainfall/common-http.service';
+import { CommonModule } from '@angular/common';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent
@@ -26,9 +29,12 @@ import { CommonHttpService } from './extreme-weather/rainfall/common-http.servic
     HumidityModule,
     TemperatureModule,
     WindSpeedModule,
-    SplitterModule, 
+    SplitterModule,
     AngularSplitModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [CommonHttpService],
   bootstrap: [AppComponent]
